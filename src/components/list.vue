@@ -55,7 +55,7 @@ export default {
             var fullDate = that.movies[i].release_date.split("-")
             let date = new Date(fullDate[0], fullDate[1], fullDate[2]);
             let newMonth = date.toLocaleString('en-us', { month: 'short' });
-            let newYear = date.getFullYear();
+            let newYear = date.getFullYear() - 1;
             let newDay = date.getDate();
             that.movies[i].newMonth = newMonth;
             that.movies[i].newYear = newYear;
@@ -219,6 +219,30 @@ $open-sans: 'Open Sans', sans-serif;
   }
   input[type='checkbox']:checked + .menu-content {
     transform: translateY(-60px);
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+ .card {
+   width: 18%;
+ }
+}
+
+@media only screen and (max-width: 1199px) {
+  .card {
+    width: 22%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 29%;
+  }
+}
+
+@media only screen and (max-width: 462px) {
+  .card {
+    width: 43%;
   }
 }
 </style>

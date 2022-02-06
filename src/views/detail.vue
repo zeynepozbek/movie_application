@@ -1,11 +1,12 @@
 <template>
-  <b-container>
+  <b-container class="detail">
     <div class="movie-content">
       <div class="movie-poster">
+        <h3 class="w-full visible-mobile">{{movieDetail.original_title}} ({{movieDetail.newYear}})</h3>
         <img :src="'https://www.themoviedb.org/t/p/w220_and_h330_face/' + movieDetail.poster_path" alt="">
       </div>
       <div class="movie-detail">
-        <h3 class="w-full">{{movieDetail.original_title}} ({{movieDetail.newYear}})</h3>
+        <h3 class="w-full visible-desktop">{{movieDetail.original_title}} ({{movieDetail.newYear}})</h3>
         <div class="w-full mt-2 mb-2 flex">
           <span v-for="item in movieDetail.genres">
             {{item.name}},
@@ -68,7 +69,7 @@
     </div>
     <div class="w-full mt-5">
       <h5>Trailer</h5>
-      <iframe width="1280" height="720" :src="'https://www.youtube.com/embed/' + trailerKey" title="YouTube video player"
+      <iframe height="720" :src="'https://www.youtube.com/embed/' + trailerKey" title="YouTube video player"
               frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </b-container>
@@ -113,7 +114,7 @@ export default  {
           var fullDate = that.movieDetail.release_date.split("-")
           let date = new Date(fullDate[0], fullDate[1], fullDate[2]);
           let newMonth = date.toLocaleString('en-us', { month: 'short' });
-          let newYear = date.getFullYear();
+          let newYear = date.getFullYear() - 1;
           let newDay = date.getDate();
           that.movieDetail.newMonth = newMonth;
           that.movieDetail.newYear = newYear;
@@ -182,6 +183,12 @@ export default  {
 </script>
 
 <style lang="scss">
+
+.detail {
+  iframe {
+    width: 100%;
+  }
+}
 h5 {
   float: left;
   width: 100%;
@@ -315,5 +322,21 @@ h5 {
 .flex {
   display: flex;
   align-items: center;
+}
+
+.visible-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .movie-content {
+    flex-flow: wrap;
+  }
+  .visible-mobile {
+    display: block;
+  }
+  .visible-desktop {
+    display: none;
+  }
 }
 </style>
