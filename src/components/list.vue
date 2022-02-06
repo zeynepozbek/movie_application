@@ -16,7 +16,7 @@
             <div class="content">
               <span class="author">{{item.vote_average}} / 10</span>
               <h1 class="title"><a href="#">{{item.title}}</a></h1>
-              <a href="#" class="button">Read more</a>
+              <router-link :to="{ name: 'detail', params: { id: item.id }, query: { id: item.id }}" class="button">Read more</router-link>
             </div>
           </div>
         </div>
