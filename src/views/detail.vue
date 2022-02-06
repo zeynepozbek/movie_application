@@ -58,7 +58,7 @@
           class="mb-2">
           <b-card-text>
             <h5 class="title">{{crew.original_name}}</h5>
-            <p class="desc">{{crew.character}}</p>
+            <p class="desc">{{crew.job}}</p>
           </b-card-text>
         </b-card>
 <!--        <div class="view-more">
