@@ -2,13 +2,13 @@
   <div class="header-content">
     <header class="container">
       <div class="logo">
-        <a id="logo" href="#home">
+        <router-link to="/" id="logo">
           MOVIE
-        </a>
+        </router-link>
       </div>
       <nav class="main-nav">
-        <a href="#home">Home</a>
-        <a href="#tvShows">About</a>
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
       </nav>
     </header>
     <!--    <b-button v-b-toggle.sidebar-1>Toggle Sidebar</b-button>

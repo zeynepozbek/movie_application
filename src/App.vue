@@ -2,9 +2,7 @@
   <div id="app">
     <headerApp></headerApp>
     <div class="content-body">
-      <jumbotronApp></jumbotronApp>
-      <movieList :listType="'popular'"></movieList>
-      <movieList :listType="'top_rated'"></movieList>
+      <router-view></router-view>
       <footerApp></footerApp>
     </div>
   </div>
@@ -13,10 +11,6 @@
 <script>
 import headerApp from './components/header.vue'
 import footerApp from './components/footer.vue'
-import jumbotronApp from './components/jumbotron.vue'
-import movieList from './components/list.vue'
-
-
 
 export default {
   name: 'app',
@@ -24,8 +18,6 @@ export default {
   components: {
     headerApp,
     footerApp,
-    jumbotronApp,
-    movieList
   },
   data() {
     return {
