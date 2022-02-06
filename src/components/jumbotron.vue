@@ -1,0 +1,80 @@
+<template>
+  <b-jumbotron class="showcase">
+    <div class="showcase-content">
+      <h1>See what's next</h1>
+      <p>Watch anywhere. Cancel Anytime</p>
+    </div>
+  </b-jumbotron>
+</template>
+
+<style lang="scss">
+.showcase {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background: url('https://i.ibb.co/vXqDmnh/background.jpg') no-repeat center center/cover;
+}
+
+.showcase::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+.showcase-top {
+  position: relative;
+  z-index: 2;
+  height: 90px;
+}
+
+.showcase-top img {
+  width: 170px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 0;
+}
+
+.showcase-top a {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+  position: relative;
+  z-index: 2;
+  width: 65%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.showcase-content h1 {
+  font-weight: 700;
+  font-size: 5.2rem;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+}
+
+.showcase-content p {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 1.25;
+  margin: 0 0 2rem;
+}
+</style>
