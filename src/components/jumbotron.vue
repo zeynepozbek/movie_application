@@ -2,7 +2,7 @@
   <b-jumbotron class="showcase">
     <div class="showcase-content">
       <h1>See what's next</h1>
-      <p>Watch anywhere. Cancel Anytime</p>
+      <p>Start Watch!</p>
     </div>
   </b-jumbotron>
 </template>
@@ -12,7 +12,7 @@
   width: 100%;
   height: 300px;
   position: relative;
-  background: url('https://i.ibb.co/vXqDmnh/background.jpg') no-repeat center center/cover;
+  background: url('https://i.pinimg.com/originals/fa/d7/7e/fad77edca39069924afaf3d0df020e30.jpg') no-repeat center center/cover;
 }
 
 .showcase::after {

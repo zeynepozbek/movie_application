@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <b-container class="container">
     <section class="link">
       <div class="logos">
         <a href="#"><i class="fab fa-facebook-square fa-2x logo"></i></a>
@@ -27,7 +27,7 @@
     <footer>
       <p>&copy Movie, Inc.</p>
     </footer>
-  </div>
+  </b-container>
 </template>
 
 <style lang="scss">

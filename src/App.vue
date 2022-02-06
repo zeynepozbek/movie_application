@@ -3,6 +3,8 @@
     <headerApp></headerApp>
     <div class="content-body">
       <jumbotronApp></jumbotronApp>
+      <movieList :listType="'popular'"></movieList>
+      <movieList :listType="'top_rated'"></movieList>
       <footerApp></footerApp>
     </div>
   </div>
@@ -12,8 +14,9 @@
 import headerApp from './components/header.vue'
 import footerApp from './components/footer.vue'
 import jumbotronApp from './components/jumbotron.vue'
+import movieList from './components/list.vue'
 
-import api from './api'
+
 
 export default {
   name: 'app',
@@ -21,39 +24,13 @@ export default {
   components: {
     headerApp,
     footerApp,
-    jumbotronApp
+    jumbotronApp,
+    movieList
   },
   data() {
     return {
-      isLoading: true,
-      movies: []
     }
   },
-  methods: {
-    doQuery(){
-      let urlDetail = '3/movie/550';
-
-      let data = {}
-
-      api.get(data, urlDetail)
-        .then((response) => {
-          console.log('response',response)
-        })
-        .catch((error)   => {
-        })
-
-    },
-    handleSearch(query) {
-      this.movies = [];
-      this.isLoading = true;
-
-      const url = `http://api.themoviedb.org/3/search/movie?api_key=991a7a0c3af8aa6c10fd25900f3ef364&query=${query}`;
-      this.doQuery(url);
-    }
-  },
-  created() {
-    this.doQuery();
-  }
 }
 </script>
 
