@@ -10,17 +10,19 @@
         <router-link to="/">Home</router-link>
         <router-link to="/about">About</router-link>
       </nav>
-    </header>
-    <!--    <b-button v-b-toggle.sidebar-1>Toggle Sidebar</b-button>
-        <b-sidebar id="sidebar-1" title="Sidebar" shadow>
+      <div class="mobile-menu">
+        <b-button v-b-toggle.sidebar-1>Menu</b-button>
+        <b-sidebar id="sidebar-1" title="Movie" shadow>
           <div class="px-3 py-2">
-            <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-              in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-            </p>
-            <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
+            <nav>
+              <router-link to="/">Home</router-link>
+              <router-link to="/about">About</router-link>
+            </nav>
           </div>
-        </b-sidebar>-->
+        </b-sidebar>
+      </div>
+    </header>
+    <!--    -->
   </div>
 </template>
 
@@ -110,5 +112,51 @@ header {
 .sub-nav a:hover {
   color: var(--dark);
 }
+
+.mobile-menu {
+  display: none;
+
+  .b-sidebar {
+    background-color: black !important;
+  }
+
+  .b-sidebar-header {
+    border-bottom: 1px solid rgba(255,255,255,.5)
+  }
+
+  strong {
+    color: #E50914;
+  }
+
+  nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+  }
+
+  .close {
+    background: transparent;
+    color: white !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .router-link-active {
+    float: left;
+    width: 100%;
+    margin: 12px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
 </style>
 

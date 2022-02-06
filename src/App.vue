@@ -35,7 +35,7 @@ body {
 }
 
 .content-body {
-  padding: 110px 0;
+  padding: 120px 0;
 }
 
 ul {
