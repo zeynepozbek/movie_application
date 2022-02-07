@@ -184,6 +184,15 @@ export default  {
 
 <style lang="scss">
 
+/* CSS VARIABLES */
+:root {
+  --default: #E50914;
+  --primary: #000;
+  --light: #F3F3F3;
+  --white: #FFFFFF;
+  --dark: 	#686868;
+}
+
 .detail {
   iframe {
     width: 100%;
@@ -192,7 +201,7 @@ export default  {
 h5 {
   float: left;
   width: 100%;
-  color: white;
+  color: var(--white);
 }
 
 .movie-content {
@@ -212,7 +221,7 @@ h5 {
   width: 100%;
 
   h5 {
-    color: white;
+    color: var(--white);
   }
 }
 
@@ -228,7 +237,7 @@ h5 {
 
     &-body {
       padding-bottom: 0 !important;
-      background: white;
+      background: var(--white);
     }
   }
 
@@ -240,12 +249,12 @@ h5 {
 
   .title {
     font-size: 16px;
-    color: #000000;
+    color: var(--primary);
     font-weight: bold;
   }
 
   .desc {
-    color: #000000;
+    color: var(--primary);
     font-size: 14px;
   }
 }
@@ -257,7 +266,7 @@ h5 {
   align-items: center;
   justify-content: center;
   padding-top: 10%;
-  color: #E50914;
+  color: var(--default);
   font-weight: bold;
 }
 
@@ -269,7 +278,7 @@ h5 {
 
   .tag {
     background-color: rgba(255, 255, 255, 0.5) !important;
-    color: #000;
+    color: var(--primary);
     padding: 4px 10px;
     border-radius: 4px;
     font-size: 13px;
@@ -281,7 +290,7 @@ h5 {
   margin: 16px 0;
   float: left;
   width: 100%;
-  color: white;
+  color: var(--white);
 }
 
 .score {
@@ -293,7 +302,7 @@ h5 {
   height: 40px;
   max-height: 40px;
   float: left;
-  color: #000000;
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -302,11 +311,11 @@ h5 {
 }
 
 .score-text {
-  color: white;
+  color: var(--white);
 }
 
 .play-trailer {
-  color: white;
+  color: var(--white);
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;

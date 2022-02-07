@@ -31,26 +31,24 @@
 </template>
 
 <style lang="scss">
-.link {
-  padding: 50px;
-}
+.sub-links {
+  ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-.sub-links ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-}
+  a {
+    color: var(--dark);
+    text-decoration: none;
 
-.sub-links a {
-  color: var(--dark);
-  text-decoration: none;
-}
-
-.sub-links a:hover {
-  color: var(--dark);
-  text-decoration: underline;
+    &:hover {
+      color: var(--dark);
+      text-decoration: underline;
+    }
+  }
 }
 
 .logos a{
@@ -59,6 +57,10 @@
 
 .logo {
   color: var(--dark);
+}
+
+.link {
+  padding: 50px;
 }
 
 footer {

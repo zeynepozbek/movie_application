@@ -74,12 +74,16 @@ export default {
 </script>
 
 <style lang="scss">
-$regal-blue: #034378;
-$san-juan: #2d4e68;
-$bermuda: #77d7b9;
-$white: #fff;
-$black: #000;
-$open-sans: 'Open Sans', sans-serif;
+
+/* CSS VARIABLES */
+:root {
+  --default: #E50914;
+  --primary: #000;
+  --light: #F3F3F3;
+  --white: #ffffff;
+  --dark: 	#686868;
+}
+
 @mixin cf {
   &::before,
   &::after {
@@ -100,7 +104,7 @@ $open-sans: 'Open Sans', sans-serif;
 
   .header {
     @include cf;
-    color: $white;
+    color: var(--white);
     padding: 1em;
     .date {
       float: left;
@@ -117,7 +121,7 @@ $open-sans: 'Open Sans', sans-serif;
     margin: 2em auto 1em;
     text-align: center;
     font-size: 12px;
-    color: $white;
+    color: var(--white);
     line-height: 1;
     position: relative;
     font-weight: 700;
@@ -150,7 +154,7 @@ $open-sans: 'Open Sans', sans-serif;
       position: relative;
     }
     a {
-      color: $white;
+      color: var(--white);
     }
     span {
       position: absolute;
@@ -158,14 +162,13 @@ $open-sans: 'Open Sans', sans-serif;
       top: 0;
       font-size: 10px;
       font-weight: 700;
-      font-family: 'Open Sans';
       transform: translate(-50%, 0);
       transition: all 0.3s;
       opacity: 0;
     }
   }
   .wrapper {
-    background-color: $white;
+    background-color: var(--white);
     min-height: 300px;
     position: relative;
     overflow: hidden;
@@ -190,7 +193,7 @@ $open-sans: 'Open Sans', sans-serif;
     bottom: 0;
     width: 100%;
     transition: transform 0.3s;
-    color: $white;
+    color: var(--white);
     transform: translateY(calc(70px + -1em));
     .content {
     padding: 1em;
@@ -206,7 +209,7 @@ $open-sans: 'Open Sans', sans-serif;
     margin-top: 10px;
     font-size: 1rem;
     a {
-      color: $white;
+      color: var(--white);
       font-weight: 600;
     }
   }

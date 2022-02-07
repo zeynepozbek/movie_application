@@ -39,6 +39,7 @@ export default {
 
 /* CSS VARIABLES */
 :root {
+  --default: #E50914;
   --primary: #000;
   --light: #F3F3F3;
   --dark: 	#686868;
@@ -68,56 +69,56 @@ header {
   object-fit: cover;
   width: 182px;
   max-height: 100%;
-}
 
-.logo img {
-  height: 35px;
-}
+  img {
+    height: 35px;
+  }
 
-#logo {
-  color: #E50914;
-  font-weight: bold;
-  font-size: 48px;
-  margin: 0;
-  padding: 0;
+  #logo {
+    color: var(--default);
+    font-weight: bold;
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 
 .main-nav {
   grid-area: mn;
   padding: 0 30px 0 20px;
-}
 
-.main-nav a {
-  color: var(--light);
-  text-decoration: none;
-  margin: 5px;
-}
+  a {
+    color: var(--light);
+    text-decoration: none;
+    margin: 5px;
 
-.main-nav a:hover {
-  color: var(--dark);
+    &:hover {
+      color: var(--dark);
+    }
+  }
+
 }
 
 .sub-nav {
   grid-area: sb;
   padding: 0 40px 0 40px;
-}
+  a {
+    color: var(--light);
+    text-decoration: none;
+    margin: 5px;
 
-.sub-nav a {
-  color: var(--light);
-  text-decoration: none;
-  margin: 5px;
-}
-
-.sub-nav a:hover {
-  color: var(--dark);
+    &:hover {
+      color: var(--dark);
+    }
+  }
 }
 
 .mobile-menu {
   display: none;
 
   .b-sidebar {
-    background-color: black !important;
+    background-color: var(--primary) !important;
   }
 
   .b-sidebar-header {
@@ -125,7 +126,7 @@ header {
   }
 
   strong {
-    color: #E50914;
+    color: var(--default);
   }
 
   nav {
@@ -137,7 +138,7 @@ header {
 
   .close {
     background: transparent;
-    color: white !important;
+    color: var(--light) !important;
     box-shadow: none !important;
     border: none !important;
   }

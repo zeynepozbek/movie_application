@@ -8,6 +8,15 @@
 </template>
 
 <style lang="scss">
+
+/* CSS VARIABLES */
+:root {
+  --default: #E50914;
+  --primary: #000;
+  --light: #F3F3F3;
+  --dark: 	#686868;
+}
+
 .showcase {
   width: 100%;
   height: 300px;
@@ -24,7 +33,7 @@
   height: 100%;
   z-index: 1;
   background: rgba(0, 0, 0, 0.1);
-  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+  box-shadow: inset 120px 100px 250px var(--primary), inset -120px -100px 250px var(--primary);
 }
 
 .showcase-top {
@@ -71,7 +80,7 @@
 
 .showcase-content p {
   text-transform: uppercase;
-  color: #fff;
+  color: var(--light);
   font-weight: 400;
   font-size: 1.9rem;
   line-height: 1.25;
